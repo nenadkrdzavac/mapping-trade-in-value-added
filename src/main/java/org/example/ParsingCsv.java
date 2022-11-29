@@ -16,8 +16,8 @@ public class ParsingCsv {
 
         HashMap<String,String> euCountriesMap = new HashMap<String, String>();
 
-        String csvFile = "C:\\Users\\KrdzavacN\\git\\mapping-trade-in-value-added\\mapping-trade-in-value-added\\src\\main\\resources\\FDVA_BSCI_2018.csv";
-        String csvFileUpdated = "C:\\Users\\KrdzavacN\\git\\mapping-trade-in-value-added\\mapping-trade-in-value-added\\src\\main\\resources\\fdva_bsci_2018_eu_d25.csv";
+        String csvFile = "C:\\Users\\KrdzavacN\\git\\mapping-trade-in-value-added\\mapping-trade-in-value-added\\src\\main\\resources\\EXGR_BSCI_2018.csv";
+        String csvFileUpdated = "C:\\Users\\KrdzavacN\\git\\mapping-trade-in-value-added\\mapping-trade-in-value-added\\src\\main\\resources\\exgr_bsci_2018_eu_d25.csv";
 
         euCountriesMap.putAll(new ParsingCsv().eucountries());
 
@@ -45,7 +45,8 @@ public class ParsingCsv {
         euMap.put("14","LTU");
         euMap.put("15","LUX");
         euMap.put("16","NLD");
-        euMap.put("17","NDR");
+        /**not generated for Norway **/
+        euMap.put("17","NOR");
         euMap.put("18","POL");
         euMap.put("19","PRT");
         euMap.put("20","SVK");
@@ -54,7 +55,8 @@ public class ParsingCsv {
         euMap.put("23","SWE");
         euMap.put("24","BGR");
         euMap.put("25","HRV");
-        euMap.put("26","RDU");
+        /**not generated data for Malta **/
+        euMap.put("26","MLT");
         euMap.put("27","CYP");
 
         return  euMap;
@@ -110,10 +112,6 @@ public class ParsingCsv {
                         String countryCode = lineSeparator[2];
                         String industryCode = lineSeparator[1];
 
-//                      if(industryCode.equals("D24")){
-//                      System.out.println("S: " + s);
-//                      }
-
                         if(euCountriesMap.containsValue(countryCode) && industryCode.equals("D25")) {
 
                             writer.write(s.toString());
@@ -139,8 +137,6 @@ public class ParsingCsv {
                     }
                 }
             }
-
-
     }
 }
 }
