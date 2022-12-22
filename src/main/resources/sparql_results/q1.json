@@ -1,0 +1,12 @@
+{ "head": { "link": [], "vars": ["country", "y", "val"] },
+  "results": { "distinct": false, "ordered": true, "bindings": [
+    { "country": { "type": "literal", "value": "EA19" }	, "y": { "type": "literal", "value": "2017" }	, "val": { "type": "literal", "value": "9981.855" }},
+    { "country": { "type": "literal", "value": "ZOTH" }	, "y": { "type": "literal", "value": "2018" }	, "val": { "type": "literal", "value": "997.336" }},
+    { "country": { "type": "literal", "value": "POL" }	, "y": { "type": "literal", "value": "2015" }	, "val": { "type": "literal", "value": "996.147" }},
+    { "country": { "type": "literal", "value": "CHN" }	, "y": { "type": "literal", "value": "2016" }	, "val": { "type": "literal", "value": "995.87" }},
+    { "country": { "type": "literal", "value": "ZASI" }	, "y": { "type": "literal", "value": "2018" }	, "val": { "type": "literal", "value": "995.448" }},
+    { "country": { "type": "literal", "value": "NONOECD" }	, "y": { "type": "literal", "value": "2018" }	, "val": { "type": "literal", "value": "995.272" }},
+    { "country": { "type": "literal", "value": "DXD" }	, "y": { "type": "literal", "value": "2016" }	, "val": { "type": "literal", "value": "994.529" }},
+    { "country": { "type": "literal", "value": "G20" }	, "y": { "type": "literal", "value": "2016" }	, "val": { "type": "literal", "value": "991.066" }},
+    { "country": { "type": "literal", "value": "OECD" }	, "y": { "type": "literal", "value": "2015" }	, "val": { "type": "literal", "value": "99.991" }},
+    { "country": { "type": "literal", "value": "ZASI" }	, "y": { "type": "literal", "value": "2017" }	, "val": { "type": "literal", "value": "99.948" }} ] } }
