@@ -112,7 +112,7 @@ public class ParsingCsv {
                         String countryCode = lineSeparator[2];
                         String industryCode = lineSeparator[1];
 
-//                        if(euCountriesMap.containsValue(countryCode) && industryCode.equals("D25")) {
+//                     if(euCountriesMap.containsValue(countryCode) && industryCode.equals("D25")) {
 
                             writer.write(s.toString());
 
