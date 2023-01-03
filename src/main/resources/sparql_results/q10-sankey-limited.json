@@ -1,0 +1,207 @@
+{
+    "data": [
+        {
+            "type": "sankey",
+            "domain": {
+                "x": [
+                    0,
+                    1
+                ],
+                "y": [
+                    0,
+                    1
+                ]
+            },
+            "orientation": "h",
+            "valueformat": ".0f",
+            "valuesuffix": "TWh",
+            "node": {
+                "pad": 15,
+                "thickness": 15,
+                "line": {
+                    "color": "black",
+                    "width": 0.5
+                },
+                "label": [
+                 "WLD",
+                 "G20",
+                 "OECD",
+                 "ZEUR",
+                 "EU28",
+                 "EU27_2020",
+                 "EU15",
+                 "EA19",
+                 "DXD",
+                 "APEC",
+                 "DEU"
+                ],
+                "color": [
+                    "rgba(255, 127, 14, 0.8)",
+                    "rgba(44, 160, 44, 0.8)",
+                    "rgba(214, 39, 40, 0.8)",
+                    "rgba(148, 103, 189, 0.8)",
+                    "rgba(140, 86, 75, 0.8)",
+                    "rgba(227, 119, 194, 0.8)",
+                    "rgba(127, 127, 127, 0.8)",
+                    "rgba(188, 189, 34, 0.8)",                   
+					"magenta",
+                    "rgba(227, 119, 194, 0.8)"]
+            },
+            "link": {
+                "source": [
+0, 
+1, 
+2, 
+3, 
+4, 
+5, 
+6, 
+7, 
+8, 
+9
+                ],				
+                "target": [
+10, 
+10, 
+10, 
+10, 
+10, 
+10, 
+10, 
+10, 
+10, 
+10
+                ],
+			  "value": [
+                 1603701.755,
+                 1545507.428,
+                 1482903.463,
+                 1448815.328,
+                 1393099.256,
+                 1383968.728,
+                 1332220.215,
+                 1319089.034,
+                 1140611.476,
+                 143534.598
+                     ],
+                "color": [
+                    "rgba(0,0,97,0.2)",
+                    "rgba(0,0,96,0.2)",
+                    "rgba(0,0,98,0.2)",
+                    "rgba(0,0,99,0.2)",
+                    "rgba(0,0,10,0.2)",
+                    "lightgreen",
+                    "goldenrod",
+				    "rgba(0,0,95,0.2)"
+				    "rgba(0,0,94,0.2)"
+                ],
+                "label": [
+                    "stream 1",
+                    "",
+                    "",
+                    "",
+                    "stream 1",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            }
+        }],
+    "layout": {
+        "title": {"text": "First ten highest gross exports of value added origin countries with DE."},
+        "width": 1118,
+        "height": 772,
+        "font": {
+            "size": 10
+        },
+        "updatemenus": [
+            {
+                "y": 1,
+                "buttons": [
+                    {
+                        "label": "Light",
+                        "method": "relayout",
+                        "args": [ "paper_bgcolor", "white" ]
+                    },
+                    {
+                        "label": "Dark",
+                        "method": "relayout",
+                        "args": [ "paper_bgcolor", "black"]
+                    }
+                ]
+            },
+            {
+                "y": 0.9,
+                "buttons": [
+                    {
+                        "label": "Thick",
+                        "method": "restyle",
+                        "args": [ "node.thickness", 15 ]
+                    },
+                    {
+                        "label": "Thin",
+                        "method": "restyle",
+                        "args": [ "node.thickness", 8]
+                    }
+                ]
+            },
+            {
+                "y": 0.8,
+                "buttons": [
+                    {
+                        "label": "Small gap",
+                        "method": "restyle",
+                        "args": [ "node.pad", 15 ]
+                    },
+                    {
+                        "label": "Large gap",
+                        "method": "restyle",
+                        "args": [ "node.pad", 20]
+                    }
+                ]
+            },
+            {
+                "y": 0.7,
+                "buttons": [
+                    {
+                        "label": "Snap",
+                        "method": "restyle",
+                        "args": [ "arrangement", "snap" ]
+                    },
+                    {
+                        "label": "Perpendicular",
+                        "method": "restyle",
+                        "args": [ "arrangement", "perpendicular"]
+                    },
+                    {
+                        "label": "Freeform",
+                        "method": "restyle",
+                        "args": [ "arrangement", "freeform"]
+                    },
+                    {
+                        "label": "Fixed",
+                        "method": "restyle",
+                        "args": [ "arrangement", "fixed"]
+                    }
+                ]
+            },
+            {
+                "y": 0.6,
+                "buttons": [
+                    {
+                        "label": "Horizontal",
+                        "method": "restyle",
+                        "args": [ "orientation", "h" ]
+                    },
+                    {
+                        "label": "Vertical",
+                        "method": "restyle",
+                        "args": [ "orientation", "v"]
+                    }
+                ]
+            }
+        ]
+    }
+}

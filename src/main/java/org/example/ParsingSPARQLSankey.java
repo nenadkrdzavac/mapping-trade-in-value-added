@@ -8,7 +8,8 @@ public class ParsingSPARQLSankey {
 
     public static void main(String[] args) throws IOException {
 
-        String csvFile = "C:\\Users\\KrdzavacN\\git\\mapping-trade-in-value-added\\mapping-trade-in-value-added\\src\\main\\resources\\sparql_results\\q9-sankey.csv";
+//        String csvFile = "C:\\Users\\KrdzavacN\\git\\mapping-trade-in-value-added\\mapping-trade-in-value-added\\src\\main\\resources\\sparql_results\\q9-sankey.csv";
+        String csvFile = "C:\\Users\\KrdzavacN\\git\\mapping-trade-in-value-added\\mapping-trade-in-value-added\\src\\main\\resources\\sparql_results\\q5-results.csv";
 
         updateCsv(csvFile);
 
