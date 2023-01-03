@@ -16,43 +16,59 @@ public class ParsingSPARQLSankey {
 
     public static void updateCsv(String csvFile) throws FileNotFoundException {
 
-        HashMap<String,Integer> countriesMap = new HashMap<String, Integer>();
+        HashMap<String, Integer> countriesMap = new HashMap<String, Integer>();
 
         BufferedReader bufferReader = null;
         String line = "";
         String cvsSplitBy = ",";
 
+
+
             try {
 
-            bufferReader = new BufferedReader(new FileReader(csvFile));
+                bufferReader = new BufferedReader(new FileReader(csvFile));
 
-            int lineNumber = 0;
-            int keyValue = 0;
+                int lineNumber = 0;
+                int keyValue = 0;
 
-            while ((line = bufferReader.readLine()) != null) {
+                while ((line = bufferReader.readLine()) != null) {
 
-            // use comma as separator
-            String[] lines = line.split(cvsSplitBy);
+                    // use comma as separator
+                    String[] lines = line.split(cvsSplitBy);
 
-            lineNumber++;
+                    lineNumber++;
 
 //            System.out.println( lineNumber + " " + lines[0] + " " + lines[1] + " " + lines[2]);
 
-                if(!countriesMap.containsKey(lines[0])) {
+                    if (!countriesMap.containsKey(lines[0])) {
 
-                    countriesMap.put(lines[0], keyValue);
+                        countriesMap.put(lines[0], keyValue);
 
-//                    System.out.println(keyValue + ". " +lines[0]);
-                    System.out.println(lines[0]+",");
+                        System.out.println(keyValue + ". " + lines[0]);
+//                System.out.println(lines[0]+",");
 
-                    keyValue++;
+                        keyValue++;
+
+                    }
+
+                    if (!countriesMap.containsKey(lines[1])) {
+
+                        countriesMap.put(lines[1], keyValue);
+
+                        System.out.println(keyValue + ". " + lines[1]);
+//                  System.out.println(lines[1]+",");
+
+                        keyValue++;
+
+                    }
+
 
                 }
 
-            }
 
 //            for(Map.Entry<String, Integer> map:countriesMap.entrySet()){
-//                System.out.println(map.getKey() + " " + map.getValue());
+//            System.out.println(map.getKey() + " " + map.getValue());
+
 //            }
 
             } catch (FileNotFoundException e) {
@@ -68,5 +84,6 @@ public class ParsingSPARQLSankey {
                     }
                 }
             }
-        }
+
+    }
 }
