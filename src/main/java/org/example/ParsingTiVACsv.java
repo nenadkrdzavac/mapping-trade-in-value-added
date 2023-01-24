@@ -2,9 +2,9 @@ package org.example;
 
 import java.io.*;
 import java.util.HashMap;
-import java.util.Map;
 
 /**
+ *
  * Author Nenad Krdzavac
  * Email nenad.krdzavac@tib.eu
  * <p>
@@ -12,16 +12,16 @@ import java.util.Map;
  *
  */
 
-public class ParsingCsv {
+public class ParsingTiVACsv {
 
     public static void main(String[] args) throws IOException {
 
         HashMap<String,String> euCountriesMap = new HashMap<String, String>();
 
-        String csvFile = "C:\\Users\\KrdzavacN\\git\\mapping-trade-in-value-added\\mapping-trade-in-value-added\\src\\main\\resources\\FDVA_BSCI_2018.csv";
-        String csvFileUpdated = "C:\\Users\\KrdzavacN\\git\\mapping-trade-in-value-added\\mapping-trade-in-value-added\\src\\main\\resources\\fdva_bsci_2018_updated.csv";
+        String csvFile = "C:\\Users\\KrdzavacN\\git\\mapping-trade-in-value-added\\mapping-trade-in-value-added\\src\\main\\resources\\EXGR_BSCI_2018.csv";
+        String csvFileUpdated = "C:\\Users\\KrdzavacN\\git\\mapping-trade-in-value-added\\mapping-trade-in-value-added\\src\\main\\resources\\exgr_bsci_2018_updated.csv";
 
-        euCountriesMap.putAll(new ParsingCsv().eucountries());
+        euCountriesMap.putAll(new ParsingTiVACsv().eucountries());
 
         updateCsv(csvFile,csvFileUpdated,euCountriesMap);
 
@@ -73,13 +73,13 @@ public class ParsingCsv {
 
             StringBuilder stringBuilder = new StringBuilder();
 
-            stringBuilder.append("country_c");
-            stringBuilder.append(",");
-            stringBuilder.append("industry_code_i");
-            stringBuilder.append(",");
             stringBuilder.append("country_p");
             stringBuilder.append(",");
             stringBuilder.append("industry_code_h");
+            stringBuilder.append(",");
+            stringBuilder.append("country_c");
+            stringBuilder.append(",");
+            stringBuilder.append("industry_code_i");
             stringBuilder.append(",");
             stringBuilder.append("year");
             stringBuilder.append(",");
@@ -109,10 +109,11 @@ public class ParsingCsv {
 
                         String[] lineSeparator = s.split(splitLineBy);
 
-                        String countryCode = lineSeparator[2];
-                        String industryCode = lineSeparator[1];
+                        String finalDemandCountryCode = lineSeparator[2];
+                        String valueAddedOriginCountryCode = lineSeparator[0];
+                        String industrySectorValueAddedOrigin = lineSeparator[1];
 
-//                     if(euCountriesMap.containsValue(countryCode) && industryCode.equals("D25")) {
+//                     if(euCountriesMap.containsValue(finalDemandCountryCode) && (!euCountriesMap.containsValue(valueAddedOriginCountryCode)) && (industrySectorValueAddedOrigin=="") ) {
 
                             writer.write(s.toString());
 
@@ -120,8 +121,13 @@ public class ParsingCsv {
 
                             System.out.println(lineNumber + ".  " + s);
                             lineNumber++;
+
+
 //                        }
                     }
+
+//                    if(lineNumber==100) break;
+
                 }
                 writer.close();
             } catch (FileNotFoundException e) {
