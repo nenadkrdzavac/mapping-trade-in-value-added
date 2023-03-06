@@ -23,7 +23,7 @@
                     "width": 0.5
                 },
                 "label": [
-                    "Agricultural 'waste'",
+                    "EU_27",
                     "Bio-conversion",
                     "Liquid",
                     "Losses",
@@ -31,7 +31,7 @@
                     "Gas",
                     "THA",
                     "JPN",
-                    "UK",
+                    "GBR",
                     "Coal",
                     "NOR",
                     "District heating",
@@ -69,7 +69,7 @@
                     "AUS",
                     "GRC",
                     "G20",
-                    "Wave",
+                    "SGP",
                     "HRV"
                 ],
                 "color": [
