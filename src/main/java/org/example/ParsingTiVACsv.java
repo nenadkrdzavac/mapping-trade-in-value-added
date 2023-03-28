@@ -16,14 +16,14 @@ public class ParsingTiVACsv {
 
     public static void main(String[] args) throws IOException {
 
-        HashMap<String,String> euCountriesMap = new HashMap<String, String>();
+    HashMap<String,String> euCountriesMap = new HashMap<String, String>();
 
-        String csvFile = "C:\\Users\\KrdzavacN\\git\\mapping-trade-in-value-added\\mapping-trade-in-value-added\\src\\main\\resources\\EXGR_BSCI_2018.csv";
-        String csvFileUpdated = "C:\\Users\\KrdzavacN\\git\\mapping-trade-in-value-added\\mapping-trade-in-value-added\\src\\main\\resources\\exgr_bsci_2018_updated.csv";
+    String csvFile = "C:\\Users\\KrdzavacN\\git\\mapping-trade-in-value-added\\src\\main\\resources\\fdva_bsci_2018_updated_test_12.csv";
+    String csvFileUpdated = "C:\\Users\\KrdzavacN\\git\\mapping-trade-in-value-added\\src\\main\\resources\\fdva_bsci_2018_updated_test_12_updated.csv";
 
-        euCountriesMap.putAll(new ParsingTiVACsv().eucountries());
+//        euCountriesMap.putAll(new ParsingTiVACsv().eucountries());
 
-        updateCsv(csvFile,csvFileUpdated,euCountriesMap);
+        updateCsv(csvFile,csvFileUpdated);
 
         }
 
@@ -56,14 +56,14 @@ public class ParsingTiVACsv {
         euMap.put("23","SWE");
         euMap.put("24","BGR");
         euMap.put("25","HRV");
-         euMap.put("26","MLT");
+        euMap.put("26","MLT");
         euMap.put("27","CYP");
 
         return  euMap;
 
         }
 
-    public static void updateCsv(String csvFile,String csvFileUpdated, HashMap<String,String> euCountriesMap) throws FileNotFoundException {
+    public static void updateCsv(String csvFile,String csvFileUpdated) throws FileNotFoundException {
 
         BufferedReader bufferReader = null;
         String line = "";
@@ -73,13 +73,13 @@ public class ParsingTiVACsv {
 
             StringBuilder stringBuilder = new StringBuilder();
 
-            stringBuilder.append("country_p");
-            stringBuilder.append(",");
-            stringBuilder.append("industry_code_h");
-            stringBuilder.append(",");
             stringBuilder.append("country_c");
             stringBuilder.append(",");
             stringBuilder.append("industry_code_i");
+            stringBuilder.append(",");
+            stringBuilder.append("country_p");
+            stringBuilder.append(",");
+            stringBuilder.append("industry_code_h");
             stringBuilder.append(",");
             stringBuilder.append("year");
             stringBuilder.append(",");
@@ -100,26 +100,28 @@ public class ParsingTiVACsv {
                     // use comma as separator
                     String[] linesArray = line.split(cvsSplitBy);
 
-                    for (String s : linesArray) {
+                    double value = Double.valueOf(linesArray[5]);
 
-                        s = s.replace("|", ",");
-                        s = s + ",";
+                    String value_string = String.valueOf(value*1000 );
 
-                        String splitLineBy = ",";
+                    String s ="";
 
-                        String[] lineSeparator = s.split(splitLineBy);
+                    s = s + linesArray[0]+","+linesArray[1]+","+linesArray[2]+","+linesArray[3]+","+linesArray[4]+","+value_string +",";
 
-                        String finalDemandCountryCode = lineSeparator[2];
-                        String valueAddedOriginCountryCode = lineSeparator[0];
-                        String industrySectorValueAddedOrigin = lineSeparator[1];
+//                    for (String s : linesArray) {
 
+//                        s = s.replace("|", ",");
+//                        s = s + ",";
+
+//                        String splitLineBy = ",";
+
+//                      String[] lineSeparator = s.split(splitLineBy);
 //                     if(euCountriesMap.containsValue(finalDemandCountryCode) && (!euCountriesMap.containsValue(valueAddedOriginCountryCode)) && (industrySectorValueAddedOrigin=="") ) {
 
-                            writer.write(s.toString());
-
+                            writer.write(s);
                             writer.write("\n");
 
-                            System.out.println(lineNumber + ".  " + s);
+//                            System.out.println(lineNumber + ".  " + line);
                             lineNumber++;
 
 
@@ -128,7 +130,7 @@ public class ParsingTiVACsv {
 
 //                    if(lineNumber==100) break;
 
-                }
+//                }
                 writer.close();
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
