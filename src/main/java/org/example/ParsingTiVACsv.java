@@ -1,6 +1,7 @@
 package org.example;
 
 import java.io.*;
+import java.math.BigDecimal;
 import java.util.HashMap;
 
 /**
@@ -18,10 +19,10 @@ public class ParsingTiVACsv {
 
     HashMap<String,String> euCountriesMap = new HashMap<String, String>();
 
-    String csvFile = "C:\\Users\\KrdzavacN\\git\\mapping-trade-in-value-added\\src\\main\\resources\\fdva_bsci_2018_updated_test_12.csv";
-    String csvFileUpdated = "C:\\Users\\KrdzavacN\\git\\mapping-trade-in-value-added\\src\\main\\resources\\fdva_bsci_2018_updated_test_12_updated.csv";
+    String csvFile = "C:\\Users\\KrdzavacN\\git\\mapping-trade-in-value-added\\src\\main\\resources\\imgr_bsci_2018_updated.csv";
+    String csvFileUpdated = "C:\\Users\\KrdzavacN\\git\\mapping-trade-in-value-added\\src\\main\\resources\\imgr_bsci_2018_updated_1000.csv";
 
-//        euCountriesMap.putAll(new ParsingTiVACsv().eucountries());
+//  euCountriesMap.putAll(new ParsingTiVACsv().eucountries());
 
         updateCsv(csvFile,csvFileUpdated);
 
@@ -87,7 +88,7 @@ public class ParsingTiVACsv {
             stringBuilder.append(",");
             stringBuilder.append('\n');
 
-            writer.write(stringBuilder.toString());
+//            writer.write(stringBuilder.toString());
 
             try {
 
@@ -97,16 +98,22 @@ public class ParsingTiVACsv {
 
                 while ((line = bufferReader.readLine()) != null) {
 
-                    // use comma as separator
-                    String[] linesArray = line.split(cvsSplitBy);
+//                    System.out.println(lineNumber + ". " + line);
 
-                    double value = Double.valueOf(linesArray[5]);
+                    if(lineNumber>1) {
 
-                    String value_string = String.valueOf(value*1000 );
+                        // use comma as separator
+                        String[] linesArray = line.split(cvsSplitBy);
 
-                    String s ="";
+                        double value = Double.valueOf(linesArray[5]);
 
-                    s = s + linesArray[0]+","+linesArray[1]+","+linesArray[2]+","+linesArray[3]+","+linesArray[4]+","+value_string +",";
+                        String value_string = new BigDecimal(value*1000).toPlainString();
+
+                        String s = "";
+
+                        s = s + linesArray[0] + "," + linesArray[1] + "," + linesArray[2] + "," + linesArray[3] + "," + linesArray[4] + "," + value_string + ",";
+
+                        System.out.println(lineNumber+ "," + s);
 
 //                    for (String s : linesArray) {
 
@@ -118,9 +125,15 @@ public class ParsingTiVACsv {
 //                      String[] lineSeparator = s.split(splitLineBy);
 //                     if(euCountriesMap.containsValue(finalDemandCountryCode) && (!euCountriesMap.containsValue(valueAddedOriginCountryCode)) && (industrySectorValueAddedOrigin=="") ) {
 
-                            writer.write(s);
-                            writer.write("\n");
+                        writer.write(s);
+                        writer.write("\n");
 
+                    }else {
+
+                        writer.write(line);
+                        writer.write("\n");
+
+                    }
 //                            System.out.println(lineNumber + ".  " + line);
                             lineNumber++;
 
