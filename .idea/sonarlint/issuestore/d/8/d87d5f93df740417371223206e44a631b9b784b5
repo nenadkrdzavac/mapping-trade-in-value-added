@@ -1,0 +1,18 @@
+
+o
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(­Ì¯ð
+Z
+java:S2147L"DCombine this catch with the one at line 74, which has the same body.(ï­£Ä
+E
+java:S1481"/Remove this unused "lineNumber" local variable.(¥ÑÜå
+V	java:S125)"<This block of commented-out lines of code should be removed.(Ö‡ôãûÿÿÿÿ
+S	java:S106/"9Replace this use of System.out or System.err by a logger.(îÿóþÿÿÿÿ
+P	java:S1250"<This block of commented-out lines of code should be removed.(ºî¨m
+S	java:S106:"9Replace this use of System.out or System.err by a logger.(ÝÉ¥‡üÿÿÿÿ
+Q	java:S125;"<This block of commented-out lines of code should be removed.(Üðù©
+V	java:S125E"<This block of commented-out lines of code should be removed.(ÓØ©Éúÿÿÿÿ
+V	java:S125H"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ
+E
+java:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+E
+java:S1128"*Remove this unused import 'java.util.Map'.(¼è½Òþÿÿÿÿ

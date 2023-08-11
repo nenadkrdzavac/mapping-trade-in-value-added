@@ -1,0 +1,6 @@
+org\example\ParsingCountryTiva.class
+org\example\ParsingNASACsv.class
+org\example\ParsingTiVACsv.class
+FoobarPojo.class
+org\example\ParsingSPARQLSankey.class
+org\example\Test.class

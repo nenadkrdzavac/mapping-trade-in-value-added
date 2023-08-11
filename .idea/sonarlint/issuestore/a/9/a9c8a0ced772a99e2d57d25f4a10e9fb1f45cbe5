@@ -1,0 +1,34 @@
+
+{
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Œ¸ó¥ûÿÿÿÿ8Çß€1
+v
+java:S2293!"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÛÅù8Èß€1
+
+java:S1319"mThe return type of this method should be an interface such as "Map" rather than the implementation "HashMap".(¦ÓÚ½ıÿÿÿÿ8Éß€1
+m	java:S117n"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªõĞ¸8Éß€1
+d
+java:S1854"BRemove this useless assignment to local variable "euCountriesMap".(Œ¸ó¥ûÿÿÿÿ8èß€1
+U
+java:S1481"3Remove this unused "euCountriesMap" local variable.(Œ¸ó¥ûÿÿÿÿ8éß€1
+]	java:S125"<This block of commented-out lines of code should be removed.(äÂ¦üÿÿÿÿ8êß€1
+~
+java:S4087“"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(ÄËªŸÿÿÿÿÿ
+\
+java:S2147–"ECombine this catch with the one at line 148, which has the same body.(ï­£Ä
+X	java:S125["<This block of commented-out lines of code should be removed.(øéÆ«8ïß€1
+]	java:S125e"<This block of commented-out lines of code should be removed.(ÈœÍíøÿÿÿÿ8ğß€1
+`
+java:S2130l">Use "Double.parseDouble" for this string-to-double conversion.(õ•Éûÿÿÿÿ8ğß€1
+>
+java:S2111n"!Use "BigDecimal.valueOf" instead.(ªõĞ¸8ñß€1
+Z	java:S106t"9Replace this use of System.out or System.err by a logger.(ŸÎàêıÿÿÿÿ8òß€1
+X	java:S125v"<This block of commented-out lines of code should be removed.(ğÉŸç8òß€1
+]	java:S125x"<This block of commented-out lines of code should be removed.(ï¶•ÿÿÿÿÿ8òß€1
+X	java:S125{"<This block of commented-out lines of code should be removed.(ÃÖò8òß€1
+X	java:S125}"<This block of commented-out lines of code should be removed.(ş§”ä8òß€1
+^	java:S125‰"<This block of commented-out lines of code should be removed.(ÈœÍíøÿÿÿÿ8óß€1
+^	java:S125"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8óß€1
+^	java:S125"<This block of commented-out lines of code should be removed.(ŸÙ°ÿÿÿÿÿ8óß€1
+^	java:S125’"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8óß€1
+L
+java:S2093]"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ8ôß€1
