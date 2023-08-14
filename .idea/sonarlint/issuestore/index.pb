@@ -9,3 +9,7 @@ S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 ]
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
+P
+ mapping-trade-in-value-added.iml,c\f\cf1a72bd254ea9241771672f1a5e53b55c83d804
+]
+-src/main/java/org/example/ParsingNASACsv.java,4\e\4edc30a4b02d566f66aab6fbde37db20be336446
